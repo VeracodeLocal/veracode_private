@@ -61,6 +61,10 @@ jobs:
     runs-on: ubuntu-latest
     name: import pipeline results to sarif
     steps:
+      - name: get scan results
+          uses: actions/download-artifact@v3
+          with:
+            name: "Veracode Pipeline-Scan Results"
       - name: Convert pipeline scan output to SARIF format
         id: convert
         uses: Veracode/veracode-pipeline-scan-results-to-sarif@v1.0.7
