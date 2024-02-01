@@ -60,6 +60,9 @@ jobs:
     needs: pipeline_scan
     runs-on: ubuntu-latest
     name: import pipeline results to sarif
+    permissions:
+      # required for all workflows
+      security-events: write
     steps:
       - name: get scan results
         uses: actions/download-artifact@v3
