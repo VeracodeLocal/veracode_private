@@ -58,6 +58,7 @@ jobs:
 
   results_to_sarif:
     needs: pipeline_scan
+    if: always()
     runs-on: ubuntu-latest
     name: import pipeline results to sarif
     permissions:
