@@ -3,7 +3,6 @@ include_repos:
  - "*"
 #Populate all the repo that should be excluded from veracode scans
 exclude_repos:
- - example-javascript
 
 groups:
     - notification
